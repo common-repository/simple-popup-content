@@ -1,0 +1,72 @@
+/*Below, I change the duration of the fade-in effect and the color of the overlay to dark instead of light which is easier on the eyes*/
+.vex-overlay {
+animation: vex-fadein 0.1s;
+-webkit-animation: vex-fadein 0.1s;
+-moz-animation: vex-fadein 0.1s;
+-ms-animation: vex-fadein 0.1s;
+-o-animation: vex-fadein 0.1s;
+-webkit-backface-visibility: hidden;
+position: fixed;
+background: rgba(0, 0, 0, 0.4);
+top: 0;
+right: 0;
+bottom: 0;
+left: 0; }
+.vex.vex-closing .vex-overlay {
+animation: vex-fadeout 0.1s;
+-webkit-animation: vex-fadeout 0.1s;
+-moz-animation: vex-fadeout 0.1s;
+-ms-animation: vex-fadeout 0.1s;
+-o-animation: vex-fadeout 0.1s;
+-webkit-backface-visibility: hidden; }
+
+.vex-content {
+animation: vex-fadein 0.1s;
+-webkit-animation: vex-fadein 0.1s;
+-moz-animation: vex-fadein 0.1s;
+-ms-animation: vex-fadein 0.1s;
+-o-animation: vex-fadein 0.1s;
+-webkit-backface-visibility: hidden;
+background: #fff; }
+.vex.vex-closing .vex-content {
+animation: vex-fadeout 0.1s;
+-webkit-animation: vex-fadeout 0.1s;
+-moz-animation: vex-fadeout 0.1s;
+-ms-animation: vex-fadeout 0.1s;
+-o-animation: vex-fadeout 0.1s;
+-webkit-backface-visibility: hidden; }
+
+.vex.vex-theme-wireframe .vex-overlay {
+background: rgba(0, 0, 0, 0.4); }
+
+.skills-container .card-item .card-image .inside-title {
+    cursor: pointer;
+} /*Without this rule, click events on the iPhone would not work*/
+@media only screen and (max-width: 415px) {
+    /*Adding scroll bars fixes the issue with vex where the window is not scrollable on mobile*/
+    .vex.vex-theme-os .vex-content {
+        max-height: 100%;
+        overflow: scroll;
+    }
+}
+
+.vex.vex-theme-wireframe .vex-content {
+    max-width: 720px;
+    width: auto;
+}
+
+
+html {
+    overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll !important;
+}
+
+.vex-dialog-input {
+    float: left;
+}
+
+input#disable_popup {
+    top: -2px;
+    position: relative;
+}
+
